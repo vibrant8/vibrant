@@ -1,0 +1,193 @@
+// Variables
+$time: 2s;
+$timeColor: .8s;
+$letter-1: rgb(255, 0, 0);
+$letter-2: rgb(255, 102, 0);
+$letter-3: rgb(255, 255, 0);
+$letter-4: rgb(0, 204, 0);
+$letter-5: rgb(51, 204, 255);
+$letter-6: rgb(0, 0, 204);
+$letter-7: rgb(102, 0, 153);
+
+//Global styles
+* { box-sizing: border-box; }
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    background-image: url("aaa.jpeg");
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.blackBG {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    animation: clearBg 1s linear 7s;
+    animation-fill-mode: forwards;
+}
+
+h1 {
+    color: transparent;
+    font-size: 200px;
+    text-transform: uppercase;
+    text-shadow: 0 0 300px #FFF;
+    animation: clearText 1s linear 5s;
+    animation-fill-mode: forwards;
+    z-index: 2;
+    margin-bottom: 0;
+}
+
+.secondary-text {
+    font-size: 50px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.letters-container {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.letter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    color: transparent;
+    font-size: 600px;
+}
+
+// Specific styles
+.letter-1 { animation: smaller $time linear 1s; }
+.letter-2 { animation: smaller $time linear 1.5s; }
+.letter-3 { animation: smaller $time linear 2s; }
+.letter-4 { animation: smaller $time linear 2.5s; }
+.letter-5 { animation: smaller $time linear 3s; }
+.letter-6 { animation: smaller $time linear 3.5s; }
+.letter-7 { animation: smaller $time linear 4s; }
+
+.letter-h1-1 {
+    animation: setColor1 $timeColor linear 8s;
+    animation-fill-mode: forwards;
+}
+.letter-h1-2 {
+    animation: setColor2 $timeColor linear 8.5s;
+    animation-fill-mode: forwards;
+}
+.letter-h1-3 { 
+    animation: setColor3 $timeColor linear 9s; 
+    animation-fill-mode: forwards;
+}
+.letter-h1-4 { 
+    animation: setColor4 $timeColor linear 9.5s; 
+    animation-fill-mode: forwards;
+}
+.letter-h1-5 { 
+    animation: setColor5 $timeColor linear 10s; 
+    animation-fill-mode: forwards;
+}
+.letter-h1-6 { 
+    animation: setColor6 $timeColor linear 10.5s; 
+    animation-fill-mode: forwards;
+}
+.letter-h1-7 { 
+    animation: setColor7 $timeColor linear 11s; 
+    animation-fill-mode: forwards;
+}
+
+
+//Animations
+@keyframes smaller {
+    from {
+        color: #FFF;
+        font-size: 600px;
+        opacity: 1;
+    }
+    to {
+        color: transparent;
+        font-size: 0px;
+        opacity: 0;
+    }
+}
+
+@keyframes clearText {
+    from { text-shadow: 0 0 300px #FFF; }
+    to { text-shadow: 0 0 0 #FFF; }
+}
+
+@keyframes clearBg {
+    from { background-color: #000; }
+    to { background-color: transparent; }
+}
+
+@keyframes setColor1 {
+    from { color: transparent; }
+    to {
+        color: $letter-1;
+        text-shadow: none;
+    }
+}
+
+@keyframes setColor2 {
+    from { color: #FFF; }
+    to {
+        color: $letter-2;
+        text-shadow: none;
+    }
+}
+
+@keyframes setColor3 {
+    from { color: #FFF; }
+    to {
+        color: $letter-3;
+        text-shadow: none;
+    }
+}
+
+@keyframes setColor4 {
+    from { color: #FFF; }
+    to {
+        color: $letter-4;
+        text-shadow: none;
+    }
+}
+
+@keyframes setColor5 {
+    from { color: #FFF; }
+    to {
+        color: $letter-5;
+        text-shadow: none;
+    }
+}
+
+@keyframes setColor6 {
+    from { color: #FFF; }
+    to {
+        color: $letter-6;
+        text-shadow: none;
+    }
+}
+
+@keyframes setColor7 {
+    from { color: #FFF; }
+    to {
+        color: $letter-7;
+        text-shadow: none;
+    }
+}
